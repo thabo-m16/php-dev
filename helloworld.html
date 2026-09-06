@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>Hello World</title>
+        <title>Hello World &copy 2026</title>
     </head>
     <body>
         <h1>WELCOME TO HTML5</h1>
@@ -32,3 +32,95 @@ generally appears in the title bar of the Web browser.-->
 <!--(!DOCTYPE html) is used to specify the HTML5 doctype declaration -->
 
 <!--(h1) is used to create a top-level heading in the document-->
+
+<!--The head element contains information and tags describing the document, such
+as its title, while the body element houses the document itself, with associated markup
+required to specify its structure-->
+
+<!--(!DOCTYPE) shows the particular version of HTML being used-->
+
+<!--ELEMENTS THAT ARE CONTAINED IN THE HEAD TAG-->
+
+<!--<meta>: Specifying Content Type, Character Set, and More
+A <meta> tag has a number of uses. For example, it can be used to specify values that are 
+equivalent to HTTP response headers. For example, if you want to make sure that your 
+MIME type and character set for an English-based HTML document is set, you could use
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+Because meta is an empty element, you would use the trailing-slash syntax shown here:
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+Most people would agree that using the UTF-8 character set is probably a good idea for 
+Western-language page authors because it gives them access to international character 
+glyphs when needed without causing them any trouble:
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+
+Deciding which MIME type to use isn’t as straightforward. For standard HTML, the 
+MIME type is always text/html. However, when XHTML is in play, confusion and 
+browser problems ensue. Numerous pundits bemoan the fact that most XHTML is served as 
+text/html, particularly because it doesn’t give you the strict parsing that XML tends to 
+afford. In the use of XHTML, you may choose from text/html, text/xml, application/
+xml, and application/xhtml+xml as potential MIME types. Given the potential for 
+compatibility and even rendering problems, for better or worse, the MIME type text/html 
+will be used for nearly all (X)HTML examples in this book so that browser rendering is 
+ensured. This hedge will be explored a bit more later in the chapter when addressing the 
+implications of XHTML. In summary at the point of writing this edition, it is recommend 
+specifying a Content-Type of text/html and the UTF-8 character set, and doing so as 
+your first element within the head, like so:
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" > 
+<title>Page title here</title> 
+</head>
+
+NOTE The meta element also has many other uses beyond defining character set and MIME type.  
+It is also used to set arbitrary name-content pairs to provide meta-information about a document  
+for purposes like search engine optimization (for example, <meta name="keywords" 
+content="Keyword1,...Keyword N" > ).
+
+OTHER (HEAD ELEMENTS)
+- <base> A <base> tag specifies an absolute URL address that is used to provide server 
+and directory information for partially specified URL addresses, called relative links, used 
+within the document:
+<base href="http://htmlref.com/basexeample" >
+Because of its global nature, a <base> tag is often found right after a <title> tag as it 
+may affect subsequent <script>, <link>, <style>, and <object> tag referenced URIs.
+
+- <link> A <link> tag specifies a special relationship between the current document and 
+another document. Most commonly, it is used to specify a style sheet used by the document 
+(as discussed in Chapter 4):
+<link rel="stylesheet" media="screen" href="global.css" type="text/css" >
+However, the <link> tag has a number of other interesting possible uses, such as to set 
+up navigation relationships and to hint to browsers about pre-cacheable content.
+
+- <object> An <object> tag allows programs and other binary objects to be directly 
+embedded in a Web page. Here, for example, a nonvisible Flash object is being referenced 
+for some use:
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"  
+        width="0" height="0" id="HiddenFlash" > 
+  <param name="movie" value="flashlib.swf" /> 
+</object>
+Using an <object> tag involves more than a bit of complexity, and there are numerous 
+choices of technology, including Java applets, plug-ins, and ActiveX controls.
+
+- <script> A <script> tag allows scripting language code to be either directly embedded 
+within,
+<script type="text/javascript"> 
+ alert("Hi from JavaScript!"); 
+ /* more code below */ 
+</script>
+or, more appropriately, linked to from a Web page:
+<script type="text/javascript" href="ajaxtcr.js"></script>
+Nearly always, JavaScript is the language in use, though other languages such as VBScript 
+are possible. 
+
+- <style> A <style> tag is used to enclose document-wide style specifications, typically 
+in Cascading Style Sheet (CSS) format, relating to fonts, colors, positioning, and other 
+aspects of content presentation:
+<style type="text/css" media="screen"> 
+ h1 {font-size: xx-large; color: red; font-style: italic;} 
+ /* all h1 elements render as big, red and italic */  
+</style>
+-->
+
+<!--An easy way to validate a document is simply to use an online service such as the 
+W3C Markup Validation Service, at http://validator.w3.org-->
+
+
